@@ -17,7 +17,6 @@ router.get('/', async (req, res) => {
     }
 });
 
-
 router.post("/", auth ,async (req, res) => {
     const token = req.get('Authorization');
     const userToken = await User.findOne({token});
